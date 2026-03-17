@@ -25,29 +25,26 @@ yarn add woopy
 Initialize the Woopy client and trigger your first alert.
 
 ```javascript
-const Woopy = require('woopy');
+// npm install woopy
+import { Woopy } from 'woopy'
 
-// Initialize with your token
 const woopy = new Woopy({
-  token: process.env.WOOPY_TOKEN
-});
+  apiKey: process.env.WOOPY_API_KEY,
+})
 
-// Trigger an alert
-async function notify() {
+// In your job / handler
+async function processPayment(orderId) {
   try {
-    const response = await woopy.alert({
-      title: "System Update",
-      body: "Deployment finished successfully.",
-      actions: ["open_dashboard", "ignore"]
-    });
-    
-    console.log(response.message);
+    await runPayment(orderId)
   } catch (error) {
-    console.error("Alert failed:", error.message);
+    await woopy.alert({
+      title: "Error occurred",
+      description: error.message,
+      actions: ['restart_job', 'flush_cache'],
+    })
+    throw error
   }
 }
-
-notify();
 ```
 
 ---
