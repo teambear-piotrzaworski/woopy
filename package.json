@@ -8,6 +8,14 @@
     "notification",
     "alert"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teambear-piotrzaworski/woopy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teambear-piotrzaworski/woopy/issues"
+  },
+  "homepage": "https://github.com/teambear-piotrzaworski/woopy#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
