@@ -58,7 +58,7 @@ Creates a new Woopy client instance.
 
 | Property | Type | Required | Description |
 | :--- | :--- | :--- | :--- |
-| `token` | `string` | **Yes** | Your secret API token from the Woopy dashboard. |
+| `token` | `string` | **Yes** | Your secret API inbound token from the Woopy dashboard. |
 | `baseUrl` | `string` | No | Custom API endpoint (e.g., for staging or testing). |
 
 ---
@@ -72,7 +72,7 @@ Triggers an alert. Returns a `Promise<WoopyResponse>`.
 | :--- | :--- | :--- | :--- |
 | `title` | `string` | **Yes** | The headline/title of the alert. |
 | `body` | `string` | No | The main content/message of the alert. |
-| `actions` | `string[]` | No | List of action keys for notification buttons. |
+| `actions` | `string[]` | No | List of action keys for notification buttons (configured in web platform). |
 
 **`WoopyResponse` Object:**
 * `message`: `string` — Success message from the API.
@@ -91,7 +91,8 @@ const woopy = new Woopy({ token: '...' });
 
 const alertData: WoopyAlertData = {
   title: "Critical Error",
-  body: "Database connection lost."
+  body: "Database connection lost.",
+  actions: ["restart-jobs", "flush-cash"]
 };
 
 await woopy.alert(alertData);
@@ -99,4 +100,4 @@ await woopy.alert(alertData);
 
 ## License
 
-[MIT](LICENSE)
+[ISC](LICENSE)
