@@ -26,7 +26,7 @@ Initialize the Woopy client and trigger your first alert.
 
 ```javascript
 // npm install woopy
-import { Woopy } from 'woopy'
+import { Woopy } from '@woopysdk/node'
 
 const woopy = new Woopy({
   apiKey: process.env.WOOPY_API_KEY,
@@ -85,7 +85,7 @@ Triggers an alert. Returns a `Promise<WoopyResponse>`.
 This SDK is written with TypeScript in mind and includes built-in type definitions.
 
 ```typescript
-import Woopy, { WoopyAlertData } from 'woopy';
+import Woopy, { WoopyAlertData } from '@woopysdk/node';
 
 const woopy = new Woopy({ token: '...' });
 
