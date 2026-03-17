@@ -1,0 +1,17 @@
+{
+  "name": "woopy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "keywords": [
+    "woopy",
+    "notification",
+    "alert"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Piotr Zaworski",
+  "license": "ISC",
+  "description": "Official Node.js library for the Woopy API. Send alerts and notifications to your system with ease and full TypeScript support."
+}
