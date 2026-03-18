@@ -9,13 +9,13 @@ Site: https://woopy.dev/
 Install the package using your favorite package manager:
 
 ```bash
-npm install woopy
+npm install @woopysdk/node
 ```
 
 Or:
 
 ```bash
-yarn add woopy
+yarn add @woopysdk/node
 ```
 
 ---
