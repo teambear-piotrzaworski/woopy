@@ -1,10 +1,10 @@
 class Woopy {
     constructor(config) {
         if (!config.token) {
-            throw new Error("Token jest wymagany, aby zainicjować Woopy!");
+            throw new Error("Token is required to initialize Woopy!");
         }
         this.token = config.token;
-        this.baseUrl = "https://api.woopy.com/api/v1";
+        this.baseUrl = "https://api.woopy.dev/api/v1";
     }
 
     async alert(data = {}) {
